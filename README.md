@@ -12,6 +12,7 @@ surface area and folder layout without implementing production trading logic yet
 - [Phase 4 Event Model](./docs/phase4-event-model.md)
 - [Phase 4 Threat Model](./docs/phase4-threat-model.md)
 - [Phase 4 Minimal Role Model](./docs/phase4-role-model.md)
+- [Phase 5 Alignment Note](./docs/phase5-alignment-note.md)
 
 ## Planned Core Contracts
 
