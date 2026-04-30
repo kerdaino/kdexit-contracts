@@ -40,6 +40,21 @@ library KdexitTypes {
         uint64 deadline;
     }
 
+    /// @notice Strict internal-beta sell preparation parameters.
+    /// @dev This struct is not arbitrary calldata. Future execution code must keep
+    /// adapter-specific payloads outside this scaffold until each adapter is
+    /// separately reviewed and allowlisted.
+    struct RestrictedSellParams {
+        address user;
+        bytes32 strategyId;
+        address tokenIn;
+        address tokenOut;
+        uint256 amountIn;
+        uint256 minAmountOut;
+        address adapter;
+        uint64 deadline;
+    }
+
     struct ExecutionReceipt {
         bytes32 executionId;
         address account;
