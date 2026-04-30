@@ -24,6 +24,22 @@ library KdexitTypes {
         uint64 requestedAt;
     }
 
+    /// @notice User-signed Phase 8 authorization for a future restricted sell path.
+    /// @dev This is deliberately not executable calldata. It binds a wallet to one
+    /// strategy, token, adapter, chain, nonce, and expiry so later execution logic
+    /// cannot reinterpret the signature as broad trading permission.
+    struct ExecutionAuthorization {
+        address wallet;
+        bytes32 strategyId;
+        address token;
+        address adapter;
+        uint256 chainId;
+        uint16 sellBps;
+        uint256 maxAmountIn;
+        uint256 nonce;
+        uint64 deadline;
+    }
+
     struct ExecutionReceipt {
         bytes32 executionId;
         address account;
